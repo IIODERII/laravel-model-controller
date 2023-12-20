@@ -9,6 +9,13 @@ $fa-font-path: "../webfonts" !default;
 
 @import "~bootstrap/scss/bootstrap";
 
-h1 {
-    color: $text-color;
+header {
+    img {
+        width: 120px;
+    }
+}
+
+footer {
+    background-color: black;
+    height: 300px;
 }

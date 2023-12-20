@@ -1,62 +1,14 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Shop
 
-## Installazione Laravel
-
-```bash
-cd directory_esercizi
-```
-
-```bash
-composer create-project --prefer-dist laravel/laravel:^9.2 your_project_name_here
-```
-
-```bash
-cd cartella_progetto
-```
-
-```bash
-code . -r
-```
-
-## Configurazione
-
-```bash
-composer require pacificdev/laravel_9_preset
-```
-
-```bash
-php artisan preset:ui bootstrap
-```
-
-```bash
-npm install
-```
-
-```bash
-npm install --save @fortawesome/fontawesome-free
-```
-
-In vite.config.js aggiungere:
-
-```json
-"~@fortawesome": path.resolve(__dirname,"node_modules/@fortawesome"),
-```
-
--   Copio dalla node_modules la cartella webfonts e la incollo nella cartella resources.
-
--   Nel resources/scss creo una cartella partials con un file \_variables.scss.
-
--   Nell'app.scss aggiungere:
-
-```scss
-@use "./partials/variables" as *;
-
-$fa-font-path: "../fonts/font-awesome" !default;
-
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
-
-@import "~bootstrap/scss/bootstrap";
-```
+Oggi facciamo la nostra prima vera interazione con il database utilizzando l’ORM di Laravel.
+1 - Create un nuovo progetto Laravel 9 (dal template)
+2 - se lo avete già va benissimo il nostro shop_db se no tramite phpMyAdmin create un nuovo database laravel_model_controller
+3 - solo se non avete già il db Importate nel vostro database la tabella movies in allegato
+4 - inserite le vostre credenziali per il database nel file .env
+5 - Create un model Movie
+es. php artisan make:model Movie
+6 - Create la rotta e un controller che gestirà la rotta / (home) e uno per i libri
+es. php artisan make:controller PageController
+7 - All’interno della funzione index() del controller, recuperate tutti i film dal database e passateli alla view, che quindi li visualizzerà a schermo, tramite delle card. 8. Stilare il layout nei dettagli con Sass
+BONUS:
+Creare rotta, link, aggiungere metodo show al controller, e pagina di dettaglio del movie
